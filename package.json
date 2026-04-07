@@ -1,0 +1,34 @@
+{
+  "name": "rudra",
+  "description": "Background coding agent that polls Linear (via CLI) for issues, routes them through configurable workflows, and produces pull requests (via gh CLI)",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akshiitGpt/rudra.git"
+  },
+  "author": "Akshit",
+  "license": "MIT",
+  "keywords": [
+    "coding-agent",
+    "linear",
+    "github",
+    "pull-request",
+    "workflow",
+    "automation",
+    "ai",
+    "llm",
+    "cli"
+  ],
+  "workspaces": [
+    "orchestrator"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev:orchestrator": "node orchestrator/dist/index.js",
+    "build:orchestrator": "cd orchestrator && npm run build",
+    "build": "npm run build:orchestrator",
+    "test": "cd orchestrator && npm test"
+  }
+}
